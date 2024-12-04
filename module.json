@@ -2,7 +2,7 @@
   "id": "foundry-extender-12",
   "title": "Foundry Extender 12",
   "description": "A set of useful scripts to extend Foundry VTT functionality for version 12 and above.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "authors": [
     {
       "name": "Frederic Pearl",

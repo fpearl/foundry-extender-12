@@ -1,0 +1,45 @@
+{
+  "id": "foundry-extender-12",
+  "title": "Foundry Extender 12",
+  "description": "A set of useful scripts to extend Foundry VTT functionality for version 12 and above.",
+  "version": "1.1.0",
+  "authors": [
+    {
+      "name": "Frederic Pearl",
+      "discord": "DrDebruyere",
+      "url": "https://github.com/fpearl"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "esmodules": [
+    "scripts/auto-close-door.js"
+  ],
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12.331",
+    "maximum": "12.999"
+  },
+  "relationships": {
+    "requires": [],
+    "conflicts": [],
+    "systems": []
+  },
+  "url": "https://github.com/fpearl/foundry-extender-12",
+  "manifest": "https://raw.githubusercontent.com/fpearl/foundry-extender-12/main/module.json",
+  "download": "https://github.com/fpearl/foundry-extender-12/archive/refs/heads/main.zip",
+  "readme": "https://github.com/fpearl/foundry-extender-12/blob/main/README.md",
+  "license": "MIT",
+  "media": [
+    {
+      "type": "screenshot",
+      "url": "https://github.com/fpearl/foundry-extender-12/blob/main/media/screenshot.jpg",
+      "loop": false
+    }
+  ]
+}

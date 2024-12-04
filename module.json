@@ -41,5 +41,16 @@
       "url": "https://github.com/fpearl/foundry-extender-12/blob/main/media/screenshot.jpg",
       "loop": false
     }
-  ]
+  ],
+  "settings": [
+  {
+    "key": "enableAutoCloseDoor",
+    "name": "Enable Auto-Close Door",
+    "hint": "Automatically close doors after 10 seconds of being opened.",
+    "type": "boolean",
+    "default": true,
+    "scope": "world",
+    "config": true
+  }
+]
 }

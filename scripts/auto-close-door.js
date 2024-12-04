@@ -1,14 +1,21 @@
 // Auto-Close Door Script
-// Version: 1.1.0
+// Version: 1.2.0
 // Author: Frederic Pearl
 // GitHub: https://github.com/fpearl
 // Discord: DrDebruyere
-// Description: Automatically closes doors 10 seconds after being opened unless disabled with a custom flag.
+// Description: Automatically closes doors 10 seconds after being opened if the setting is enabled.
 
-const AUTO_CLOSE_VERSION = "1.1.0";
+const AUTO_CLOSE_VERSION = "1.2.0";
 console.log(`Auto-Close Door Script Version ${AUTO_CLOSE_VERSION} by Frederic Pearl is running.`);
 
 Hooks.on("updateWall", (wallDocument, change, options, userId) => {
+    // Check if auto-close is enabled
+    const isEnabled = game.settings.get("foundry-extender-12", "enableAutoCloseDoor");
+    if (!isEnabled) {
+        console.log("Auto-close door script is disabled in module settings.");
+        return;
+    }
+
     try {
         console.log("updateWall Triggered:", wallDocument);
 
@@ -32,7 +39,6 @@ Hooks.on("updateWall", (wallDocument, change, options, userId) => {
                     if (currentWall && currentWall.document.ds === 1) {
                         await currentWall.document.update({ ds: 0 }); // Close the door
                         console.log("Door automatically closed!");
-                        // Foundry handles door sounds automatically
                     }
                 }, 10000); // Wait 10 seconds (10000 ms)
             }
